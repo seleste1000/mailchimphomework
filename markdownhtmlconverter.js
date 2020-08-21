@@ -84,10 +84,8 @@ function convertBlankLine(){
 }
 
 
-//check if unformatted
 //fails other checks
-//convert unformatted
-//exchange `` for <p> tags
+//convert unformatted text
 function convertBody(input){
 
     //if there is no prefix just convert body text to be between <p> tags
@@ -104,7 +102,6 @@ function convertBody(input){
 //search using regex checking for [___](___)
 function checkLink(input){
 
-    //pattern match with regex
     const regex_link = /[[](.*)[\]][(](.*)[)]/g;
 
     return input.match(regex_link) != null;
