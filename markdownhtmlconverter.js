@@ -13,10 +13,12 @@ function converter(user_input){
     let formatted = user_input.split('\n');
 
     // the converter goes to each line
+    //checks for line type, then converts
     for(let i = 0; i < formatted.length; i++){
 
-        //checks for line type, then converts
+        
         if (formatted[i] == ""){
+            //dont include empty lines, blank lines/extra whitespace should be specified
             continue;
         } else if(isHeader(formatted[i])){
             converted_text_container.push(convertHeader(formatted[i])); 
